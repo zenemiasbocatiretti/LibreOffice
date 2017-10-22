@@ -1,0 +1,57 @@
+Como instalar a versão mais recente do LibreOffice no Linux Debian, Ubuntu e seus derivados
+
+Para instalar ou atualizar a versão mais recente do LibreOffice no Linux Debian, Ubuntu e seus derivados, usando os DEBs oficiais, faça o seguinte:
+Passo 1. Abra um terminal (Usando o Dash ou pressionando as teclas CTRL+ALT+T);
+Passo 2. Se o programa já estiver instalado no seu sistema, execute o comando a seguir para remover a instalação anterior:
+
+sudo apt-get remove --purge libreoffice*
+
+Passo 3. Confira se o seu sistema é de 32 bits ou 64 bits, para isso, use o seguinte comando no terminal:
+
+uname -m
+
+Passo 4. Se seu sistema é de 32 bits, use o comando abaixo para baixar. Se o link estiver desatualizado, acesse essa página, baixe a última versão e salve-o com o nome libreOffice.tar.gz e libreOffice-pt-br.tar.gz:
+
+wget http://tdf.c3sl.ufpr.br/libreoffice/stable/5.4.1/deb/x86/LibreOffice_5.4.1_Linux_x86_deb.tar.gz -O libreOffice.tar.gz
+
+wget http://tdf.c3sl.ufpr.br/libreoffice/stable/5.4.1/deb/x86/LibreOffice_5.4.1_Linux_x86_deb_langpack_pt-BR.tar.gz -O libreOffice-pt-br.tar.gz
+
+Passo 5. Se seu sistema é de 64 bits, use o comando abaixo para baixar. Se o link estiver desatualizado, acesse essa página, baixe a última versão e salve-o com o nome libreOffice.tar.gz e libreOffice-pt-br.tar.gz:
+
+wget http://tdf.c3sl.ufpr.br/libreoffice/stable/5.4.1/deb/x86_64/LibreOffice_5.4.1_Linux_x86-64_deb.tar.gz -O libreOffice.tar.gz
+
+wget http://tdf.c3sl.ufpr.br/libreoffice/stable/5.4.1/deb/x86_64/LibreOffice_5.4.1_Linux_x86-64_deb_langpack_pt-BR.tar.gz -O libreOffice-pt-br.tar.gz
+
+Passo 6. Descompacte os arquivos baixados com o comando:
+
+tar -vzxf libreOffice.tar.gz
+
+tar -vzxf libreOffice-pt-br.tar.gz
+
+Passo 7. Vá para a pasta criada e depois para a pasta onde fica o arquivo de instalação, com os comandos abaixo:
+
+cd LibreOffice_*
+
+cd DEBS
+
+Passo 8. Agora instale o programa, usando esse comando:
+
+sudo dpkg -i *.deb
+
+Passo 9. Vá para a pasta criada pelo pacote de linguagem e depois para a pasta onde fica o arquivo de instalação, com os comandos abaixo:
+
+cd 
+
+cd LibreOffice*langpack_pt-BR/
+
+cd DEBS
+
+Passo 10. Agora instale os pacotes de linguagem, usando esse comando:
+
+sudo dpkg -i *.deb
+
+Passo 11. Se depois você precisar desinstalar o programa, use o comando abaixo;
+
+sudo apt-get remove libreoffice*
+
+Fonte: http://www.edivaldobrito.com.br/libreoffice-no-linux/
